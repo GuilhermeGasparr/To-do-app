@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do App</title>
+  </head>
+  <body>
+    <h1>Minha Lista</h1>
+    <div id="container">
+      <form id="form-tarefas">
+        <input
+          type="text"
+          id="tarefa-user"
+          placeholder="Digite sua tarefa aqui"
+        />
+        <button type="submit">Adicionar</button>
+      </form>
+      <div id="filtro-container">
+        <label for="filtro-tarefas">Filtrar Por:</label>
+        <select id="filtro-tarefas">
+          <option value="todas">Todas</option>
+          <option value="pendentes">Pendentes</option>
+          <option value="concluidas">Concluídas</option>
+        </select>
+      </div>
+      <ul id="lista-tarefas"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
