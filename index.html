@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do App</title>
   </head>
   <body>
-    <h1>Minha Lista</h1>
+    <h1>To-do App</h1>
     <div id="container">
       <div id="aviso"></div>
       <form id="form-tarefas">
@@ -16,17 +20,29 @@
           id="tarefa-user"
           placeholder="Digite sua tarefa aqui"
         />
+        <input type="date" id="prazo-user" />
         <button type="submit">Adicionar</button>
       </form>
       <div id="filtro-container">
-        <label for="filtro-tarefas">Filtrar Por:</label>
+        <label for="filtro-tarefas">Ver :</label>
         <select id="filtro-tarefas">
           <option value="todas">Todas</option>
           <option value="pendentes">Pendentes</option>
           <option value="concluidas">Concluídas</option>
         </select>
+        <label for="filtro-container" id="contador">Tarefas : </label>
+      </div>
+      <div id="pesquisa">
+        <input type="text" placeholder="Procurar Tarefa" id="input-pesquisa" />
       </div>
       <ul id="lista-tarefas"></ul>
+      <div id="modal-confirmacao">
+        <div id="mensagem">
+          <p>Tem certeza que deseja excluir esta tarefa ?</p>
+          <button id="confirmar-button">Confirmar</button>
+          <button id="cancelar-button">Cancelar</button>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
