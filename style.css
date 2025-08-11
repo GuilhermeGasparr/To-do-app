@@ -62,7 +62,8 @@ h1 {
 #pesquisa input {
   border-radius: 16px;
   text-align: center;
-  width: 50vh;
+  width: 100%;
+  max-width: 500px;
   margin-top: 10px;
   color: #000;
 }
@@ -180,4 +181,27 @@ button:hover {
 .checkbox-wrapper input:checked + .checkbox-fake {
   background-color: #74d776;
   border-color: #4ab74d;
+}
+@media (max-width: 476px) {
+  h1 {
+    font-size: 28px;
+  }
+  body {
+    padding: 16px;
+  }
+  #pesquisa input {
+    width: 200px;
+    margin-left: 15%;
+  }
+
+  #lista-tarefas li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 180px;
+    margin: auto;
+  }
+  #form-tarefas input{
+    width: 80px;
+  }
 }
